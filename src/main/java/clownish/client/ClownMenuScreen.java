@@ -17,7 +17,14 @@ public class ClownMenuScreen extends Screen {
         int mouseY,
         float delta
     ) {
-        this.renderBackground(context, mouseX, mouseY, delta);
+        // Simple background — no Minecraft blur
+        context.fill(
+            0,
+            0,
+            this.width,
+            this.height,
+            0xFF101018
+        );
 
         int centerX = this.width / 2;
         int centerY = this.height / 2;
